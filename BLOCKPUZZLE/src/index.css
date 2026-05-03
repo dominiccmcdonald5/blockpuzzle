@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;600&display=swap');
+
+:root {
+  --ink: #111111;
+  --ink-soft: #4c4c4c;
+  --bg-a: #f5e9c9;
+  --bg-b: #ead2a3;
+  --frame: #0e0e0e;
+
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 16% 12%, rgba(255, 255, 255, 0.48), transparent 38%),
+    radial-gradient(circle at 84% 72%, rgba(255, 255, 255, 0.34), transparent 32%),
+    linear-gradient(140deg, var(--bg-a), var(--bg-b));
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Chakra Petch', sans-serif;
+}
