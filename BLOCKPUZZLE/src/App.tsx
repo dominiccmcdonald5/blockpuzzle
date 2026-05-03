@@ -2,6 +2,7 @@ import {
   useEffect,
   useRef,
   useState,
+  type CSSProperties,
   type FormEvent,
   type PointerEvent as ReactPointerEvent,
 } from 'react'
@@ -41,7 +42,7 @@ type PuzzleConfig = {
 }
 
 const BOARD_SIZE = 8
-const CELL_SIZE = 48
+const DESKTOP_CELL_SIZE = 48
 
 const PUZZLE_ONE_TEMPLATES: PieceTemplate[] = [
   {
@@ -372,13 +373,29 @@ const createPiecesFromTemplates = (templates: PieceTemplate[]): Piece[] =>
     z: index + 1,
   }))
 
-const getPieceSize = (blocks: Cell[]) => {
+const getPieceSize = (blocks: Cell[], cellSize: number) => {
   const maxX = Math.max(...blocks.map((cell) => cell[0]))
   const maxY = Math.max(...blocks.map((cell) => cell[1]))
   return {
-    width: (maxX + 1) * CELL_SIZE,
-    height: (maxY + 1) * CELL_SIZE,
+    width: (maxX + 1) * cellSize,
+    height: (maxY + 1) * cellSize,
   }
+}
+
+const getResponsiveCellSize = (stageWidth: number) => {
+  if (stageWidth <= 420) {
+    return 30
+  }
+
+  if (stageWidth <= 560) {
+    return 34
+  }
+
+  if (stageWidth <= 760) {
+    return 40
+  }
+
+  return DESKTOP_CELL_SIZE
 }
 
 const getDistributedStartPosition = (
@@ -414,6 +431,7 @@ function App() {
   const [codeInput, setCodeInput] = useState('')
   const [codeError, setCodeError] = useState('')
   const [activePuzzle, setActivePuzzle] = useState<PuzzleConfig | null>(null)
+  const [cellSize, setCellSize] = useState(DESKTOP_CELL_SIZE)
   const [pieces, setPieces] = useState<Piece[]>([])
   const [dragState, setDragState] = useState<DragState | null>(null)
 
@@ -463,6 +481,10 @@ function App() {
 
     const updateLayout = () => {
       const stageRect = stage.getBoundingClientRect()
+      const nextCellSize = getResponsiveCellSize(stageRect.width)
+      setCellSize((current) =>
+        current === nextCellSize ? current : nextCellSize,
+      )
 
       setPieces((current) => {
         if (!initializedRef.current) {
@@ -470,7 +492,7 @@ function App() {
           const totalPieces = activePuzzle.templates.length
 
           return activePuzzle.templates.map((template, index) => {
-            const size = getPieceSize(template.blocks)
+            const size = getPieceSize(template.blocks, nextCellSize)
             const start = getDistributedStartPosition(
               index,
               totalPieces,
@@ -492,7 +514,7 @@ function App() {
         }
 
         return current.map((piece) => {
-          const size = getPieceSize(piece.blocks)
+          const size = getPieceSize(piece.blocks, nextCellSize)
           const maxX = Math.max(0, stageRect.width - size.width)
           const maxY = Math.max(0, stageRect.height - size.height)
 
@@ -551,7 +573,7 @@ function App() {
           return piece
         }
 
-        const size = getPieceSize(piece.blocks)
+        const size = getPieceSize(piece.blocks, cellSize)
         const unclampedX = clientX - stageRect.left - offsetX
         const unclampedY = clientY - stageRect.top - offsetY
         const maxX = stageRect.width - size.width
@@ -628,6 +650,10 @@ function App() {
     setDragState(null)
   }
 
+  const stageStyle = {
+    '--cell-size': `${cellSize}px`,
+  } as CSSProperties
+
   return (
     <main className="puzzle-page">
       {!activePuzzle ? (
@@ -668,7 +694,7 @@ function App() {
             </button>
           </header>
 
-          <section className="puzzle-stage" ref={stageRef}>
+          <section className="puzzle-stage" ref={stageRef} style={stageStyle}>
             <div className="board" aria-label="Target board">
               {Array.from({ length: BOARD_SIZE * BOARD_SIZE }).map((_, index) => (
                 <div key={`board-cell-${index}`} className="board-cell" />
@@ -676,7 +702,7 @@ function App() {
             </div>
 
             {pieces.map((piece) => {
-              const size = getPieceSize(piece.blocks)
+              const size = getPieceSize(piece.blocks, cellSize)
 
               return (
                 <div
@@ -699,8 +725,8 @@ function App() {
                       key={`${piece.id}-block-${index}`}
                       className="piece-cell"
                       style={{
-                        left: `${block[0] * CELL_SIZE}px`,
-                        top: `${block[1] * CELL_SIZE}px`,
+                        left: `${block[0] * cellSize}px`,
+                        top: `${block[1] * cellSize}px`,
                         background: piece.color,
                       }}
                     />
