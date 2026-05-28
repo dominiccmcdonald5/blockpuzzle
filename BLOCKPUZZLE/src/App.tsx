@@ -346,6 +346,154 @@ const PUZZLE_TWO_TEMPLATES: PieceTemplate[] = [
   },
 ]
 
+const PUZZLE_THREE_TEMPLATES: PieceTemplate[] = [
+  {
+    id: 'lime-cap',
+    color: '#2be400',
+    blocks: [
+      [0, 0],
+      [1, 0],
+      [2, 0],
+      [1, 1],
+      [2, 1],
+    ],
+    anchorX: 0.06,
+    anchorY: 0.04,
+  },
+  {
+    id: 'sky-step',
+    color: '#7ccff1',
+    blocks: [
+      [0, 0],
+      [0, 1],
+      [1, 1],
+      [1, 2],
+      [2, 2],
+      [2, 3],
+
+    ],
+    anchorX: 0.35,
+    anchorY: 0.04,
+  },
+  {
+    id: 'pink-top-l',
+    color: '#e67cec',
+    blocks: [
+      [0, 0],
+      [1, 0],
+      [2, 0],
+      [3, 0],
+      [3, 1],
+    ],
+    anchorX: 0.66,
+    anchorY: 0.04,
+  },
+  {
+    id: 'yellow-side-t',
+    color: '#f4dc00',
+    blocks: [
+      [0, 0],
+      [0, 1],
+      [0, 2],
+      [0, 3],
+      [1, 1],
+      [2, 1],
+      [3, 1],
+    ],
+    anchorX: 0.04,
+    anchorY: 0.26,
+  },
+  {
+    id: 'lavender-column',
+    color: '#b9afff',
+    blocks: [
+      [0, 0],
+      [1, 0],
+      [1, 1],
+      [2, 1],
+      [1, 2],
+      [2, 2],
+      [1, 3],
+      [2, 3],
+    ],
+    anchorX: 0.74,
+    anchorY: 0.26,
+  },
+  {
+    id: 'magenta-bar',
+    color: '#b11374',
+    blocks: [
+      [0, 0],
+      [1, 0],
+      [2, 0],
+      [1,1]
+    ],
+    anchorX: 0.22,
+    anchorY: 0.47,
+  },
+  {
+    id: 'orange-platform',
+    color: '#ff6a00',
+    blocks: [
+      [1,0],
+      [0,1],
+      [1,1],
+      [2,1],
+      [0,2],
+      [1,2],
+      [2,2],
+      [1,3]
+    ],
+    anchorX: 0.45,
+    anchorY: 0.51,
+  },
+  {
+    id: 'violet-arch',
+    color: '#4b14bf',
+    blocks: [
+      [1, 0],
+      [0, 1],
+      [1, 1],
+      [2, 1],
+      [0, 2],
+      [0, 3],
+      [2, 2],
+    ],
+    anchorX: 0.05,
+    anchorY: 0.68,
+  },
+  {
+    id: 'forest-base',
+    color: '#0c8f62',
+    blocks: [
+      [0, 0],
+      [0, 1],
+      [1, 1],
+      [2, 1],
+      [3, 1],
+      [4, 1],
+      [2, 0],
+    ],
+    anchorX: 0.27,
+    anchorY: 0.78,
+  },
+  {
+    id: 'red-square',
+    color: '#ef2020',
+    blocks: [
+      [1, 0],
+      [2,0],
+      [0, 1],
+      [1, 1],
+      [2, 1],
+      [1,2],
+      [2,2]
+    ],
+    anchorX: 0.78,
+    anchorY: 0.78,
+  },
+]
+
 const PUZZLES: PuzzleConfig[] = [
   {
     code: '1234',
@@ -360,6 +508,13 @@ const PUZZLES: PuzzleConfig[] = [
     subtitle:
       'You unlocked the second puzzle copy. Drag and unscramble all pieces into the 8x8 cube.',
     templates: PUZZLE_TWO_TEMPLATES,
+  },
+  {
+    code: '8890',
+    title: 'Block Puzzle C',
+    subtitle:
+      'Puzzle C is live. Use the provided solution pattern to rebuild the full 8x8 cube.',
+    templates: PUZZLE_THREE_TEMPLATES,
   },
 ]
 
