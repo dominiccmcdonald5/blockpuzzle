@@ -494,6 +494,121 @@ const PUZZLE_THREE_TEMPLATES: PieceTemplate[] = [
   },
 ]
 
+const PUZZLE_FOUR_TEMPLATES: PieceTemplate[] = [
+  {
+    id: 'red-tower',
+    color: '#4b0ddb',
+    blocks: [
+      [0,0],
+      [0,1],
+      [0,2],
+      [0,3],
+      [0,4],
+      [1,0],
+      [1,1],
+      [1,2],
+      [1,3],
+      [1,4],
+      [2,1],
+      [2,2],
+      [2,3],
+      [2,4]
+    ],
+    anchorX: 0.03,
+    anchorY: 0.04,
+  },
+  {
+    id: 'orange-runner',
+    color: '#ff6a00',
+    blocks: [
+      [0,5],
+      [0,6],
+      [1,0],
+      [1,5],
+      [1,6],
+      [2,0],
+      [2,1],
+      [2,2],
+      [2,3],
+      [2,4],
+      [2,5],
+      [2,6],
+      [3,3],
+      [3,4],
+      [3,5],
+      [3,6],
+      [4,3],
+      [4,4],
+      [5,3],
+      [5,4]
+    ],
+    anchorX: 0.24,
+    anchorY: 0.04,
+  },
+  {
+    id: 'mint-frame',
+    color: '#91f8b9',
+    blocks: [
+      [0,0],
+      [0,1],
+      [0,2],
+      [1,0],
+      [1,1],
+      [1,2],
+      [2,0],
+      [2,1],
+      [2,2],
+      [3,0]
+    ],
+    anchorX: 0.58,
+    anchorY: 0.04,
+  },
+  {
+    id: 'green-line',
+    color: '#b9b356',
+    blocks: [
+      [0, 0],
+      [0, 1],
+      [0, 2],
+      [0, 3],
+      [0, 4],
+      [0, 5],
+      [0, 6],
+    ],
+    anchorX: 0.94,
+    anchorY: 0.2,
+  },
+  {
+    id: 'blue-corner',
+    color: '#1658d7',
+    blocks: [
+      [0, 0],
+      [0, 1],
+      [0, 2],
+      [1,2]
+    ],
+    anchorX: 0.04,
+    anchorY: 0.74,
+  },
+  {
+    id: 'magenta-box',
+    color: '#b11374',
+    blocks: [
+      [0,2],
+      [1,2],
+      [2,2],
+      [3,0],
+      [3,1],
+      [3,2],
+      [4,0],
+      [4,1],
+      [4,2]
+    ],
+    anchorX: 0.72,
+    anchorY: 0.73,
+  },
+]
+
 const PUZZLES: PuzzleConfig[] = [
   {
     code: '1234',
@@ -515,6 +630,13 @@ const PUZZLES: PuzzleConfig[] = [
     subtitle:
       'Puzzle C is live. Use the provided solution pattern to rebuild the full 8x8 cube.',
     templates: PUZZLE_THREE_TEMPLATES,
+  },
+  {
+    code: '4356',
+    title: 'Block Puzzle D',
+    subtitle:
+      'Puzzle D is loaded with the latest piece set. Arrange every piece to rebuild the full 8x8 cube.',
+    templates: PUZZLE_FOUR_TEMPLATES,
   },
 ]
 
