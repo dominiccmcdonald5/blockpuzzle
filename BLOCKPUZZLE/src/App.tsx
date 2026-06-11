@@ -625,7 +625,7 @@ const PUZZLES: PuzzleConfig[] = [
     templates: PUZZLE_TWO_TEMPLATES,
   },
   {
-    code: '8890',
+    code: '102394548372313',
     title: 'Block Puzzle C',
     subtitle:
       'Puzzle C is live. Use the provided solution pattern to rebuild the full 8x8 cube.',
