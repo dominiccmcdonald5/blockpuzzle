@@ -748,6 +748,145 @@ const PUZZLE_FIVE_TEMPLATES: PieceTemplate[] = [
   },
 ]
 
+const PUZZLE_SIX_TEMPLATES: PieceTemplate[] = [
+  {
+    id: 'lavender-left-hook',
+    color: '#a9a3e9',
+    blocks: [
+      [0, 0],
+      [1, 0],
+      [0, 1],
+      [1, 1],
+      [0, 2],
+      [1, 2],
+      [1, 3],
+    ],
+    anchorX: 0.03,
+    anchorY: 0.03,
+  },
+  {
+    id: 'orange-open-c',
+    color: '#ff6a00',
+    blocks: [
+      [0, 0],
+      [1, 0],
+      [2, 0],
+      [0, 1],
+      [0, 2],
+      [0, 3],
+      [1, 3],
+      [2, 3],
+      [1,1]
+    ],
+    anchorX: 0.24,
+    anchorY: 0.03,
+  },
+  {
+    id: 'lime-top-t',
+    color: '#2be400',
+    blocks: [
+      [0, 1],
+      [1, 0],
+      [2, 0],
+      [3, 0],
+      [1, 1],
+      [2, 1],
+      [2, 2],
+      [3,1]
+    ],
+    anchorX: 0.57,
+    anchorY: 0.03,
+  },
+  {
+    id: 'cyan-right-tee',
+    color: '#13a7c9',
+    blocks: [
+      [1, 0],
+      [1, 1],
+      [0, 1],
+      [1, 2],
+      [1, 3],
+      [1, 4],
+    ],
+    anchorX: 0.86,
+    anchorY: 0.22,
+  },
+  {
+    id: 'pink-center-bend',
+    color: '#e57fe8',
+    blocks: [
+      [0,0],
+      [0,2],
+      [1,0],
+      [1,2],
+      [2,0],
+      [2,1],
+      [2,2]
+    ],
+    anchorX: 0.39,
+    anchorY: 0.27,
+  },
+  {
+    id: 'red-bottom-mass',
+    color: '#ef2020',
+    blocks: [
+      [0,1],
+      [0,2],
+      [0,3],
+      [1,0],
+      [1,1],
+      [1,2],
+      [1,3],
+      [2,3]
+    ],
+    anchorX: 0.64,
+    anchorY: 0.67,
+  },
+  {
+    id: 'purple-bottom-l',
+    color: '#4b14bf',
+    blocks: [
+      [0, 0],
+      [0,1],
+      [1,1],
+      [2,1],
+      [2,2],
+      [2,3]
+    ],
+    anchorX: 0.25,
+    anchorY: 0.7,
+  },
+  {
+    id: 'yellow-lower-base',
+    color: '#f4dc00',
+    blocks: [
+      [1, 0],
+      [1, 1],
+      [0, 2],
+      [1, 2],
+      [2, 2],
+      [3, 2],
+      [0, 3],
+      [1, 3],
+      [2,3],
+      [3,3]
+    ],
+    anchorX: 0.03,
+    anchorY: 0.69,
+  },
+  {
+    id: 'pink-left-column',
+    color: '#b11374',
+    blocks: [
+      [0, 0],
+      [0, 1],
+      [0, 2],
+    ],
+    anchorX: 0.01,
+    anchorY: 0.37,
+  },
+]
+
 const PUZZLES: PuzzleConfig[] = [
   {
     code: '1234',
@@ -783,6 +922,13 @@ const PUZZLES: PuzzleConfig[] = [
     subtitle:
       'Puzzle E mirrors your requested formation. Drag and arrange each piece to rebuild the full 8x8 cube.',
     templates: PUZZLE_FIVE_TEMPLATES,
+  },
+  {
+    code: '601748',
+    title: 'Block Puzzle F',
+    subtitle:
+      'Puzzle F mirrors your latest piece formation. Drag and arrange each piece to rebuild the full 8x8 cube.',
+    templates: PUZZLE_SIX_TEMPLATES,
   },
 ]
 
