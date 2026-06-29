@@ -887,6 +887,136 @@ const PUZZLE_SIX_TEMPLATES: PieceTemplate[] = [
   },
 ]
 
+const PUZZLE_SEVEN_TEMPLATES: PieceTemplate[] = [
+  {
+    id: 'orange-frame',
+    color: '#ffae00',
+    blocks: [
+      [0, 0],
+      [0, 1],
+      [0, 2],
+      [3, 2],
+      [4, 2],
+      [0, 3],
+      [1, 3],
+      [2, 3],
+      [3, 3],
+    ],
+    anchorX: 0.03,
+    anchorY: 0.03,
+  },
+  {
+    id: 'lime-top',
+    color: '#29e600',
+    blocks: [
+      [0, 0],
+      [1, 0],
+      [2, 0],
+      [3, 0],
+      [4, 0],
+      [0, 1],
+      [1, 1],
+      [2, 1],
+      [3, 1],
+      [0, 2],
+      [1, 2],
+    ],
+    anchorX: 0.32,
+    anchorY: 0.03,
+  },
+  {
+    id: 'pink-cap',
+    color: '#e98ae8',
+    blocks: [
+      [0, 0],
+      [1, 0],
+      [0, 1],
+
+    ],
+    anchorX: 0.78,
+    anchorY: 0.04,
+  },
+  {
+    id: 'purple-tower',
+    color: '#6b00d7',
+    blocks: [
+      [0, 0],
+      [2, 0],
+      [0, 1],
+      [1, 1],
+      [2, 1],
+      [2, 2],
+      [2, 3],
+      [2,4]
+    ],
+    anchorX: 0.74,
+    anchorY: 0.24,
+  },
+  {
+    id: 'blue-bend',
+    color: '#1153e6',
+    blocks: [
+      [2, 0],
+      [3, 0],
+      [4,0],
+      [4,2],
+      [2, 1],
+      [4, 1],
+      [2, 2],
+      [0, 3],
+      [1, 3],
+      [2, 3],
+      [0, 4],
+      [1, 4],
+      [2, 4],
+    ],
+    anchorX: 0.24,
+    anchorY: 0.42,
+  },
+  {
+    id: 'yellow-step',
+    color: '#ffe300',
+    blocks: [
+      [0, 0],
+      [0, 1],
+      [0,2],
+      [1, 2],
+      [2, 2],
+      [0, 3],
+      [1, 3],
+    ],
+    anchorX: 0.58,
+    anchorY: 0.74,
+  },
+  {
+    id: 'red-block',
+    color: '#f11a17',
+    blocks: [
+      [0, 0],
+      [1, 0],
+      [2, 0],
+      [3, 0],
+      [0, 1],
+      [1, 1],
+      [2, 1],
+      [3, 1],
+      [0, 2],
+      [1, 2],
+      [0, 3],
+      [1, 3],
+    ],
+    anchorX: 0.03,
+    anchorY: 0.58,
+  },
+  {
+    id: 'deep-green-dot',
+    color: '#0c8f62',
+    blocks: [[0, 0]],
+    anchorX: 0.92,
+    anchorY: 0.9,
+  },
+]
+
 const PUZZLES: PuzzleConfig[] = [
   {
     code: '1234',
@@ -899,36 +1029,43 @@ const PUZZLES: PuzzleConfig[] = [
     code: '8765',
     title: 'Block Puzzle B',
     subtitle:
-      'You unlocked the second puzzle copy. Drag and unscramble all pieces into the 8x8 cube.',
+      'Drag every piece with mouse or finger and arrange it into an 8x8 cube! SS a photo of the completed puzzle and ping production to stop your time!',
     templates: PUZZLE_TWO_TEMPLATES,
   },
   {
     code: '102394548372313',
     title: 'Block Puzzle C',
     subtitle:
-      'Puzzle C is live. Use the provided solution pattern to rebuild the full 8x8 cube.',
+      'Drag every piece with mouse or finger and arrange it into an 8x8 cube! SS a photo of the completed puzzle and ping production to stop your time!',
     templates: PUZZLE_THREE_TEMPLATES,
   },
   {
     code: '4356',
     title: 'Block Puzzle D',
     subtitle:
-      'Puzzle D is loaded with the latest piece set. Arrange every piece to rebuild the full 8x8 cube.',
+      'Drag every piece with mouse or finger and arrange it into an 8x8 cube! SS a photo of the completed puzzle and ping production to stop your time!',
     templates: PUZZLE_FOUR_TEMPLATES,
   },
   {
     code: '109060',
     title: 'Block Puzzle E',
     subtitle:
-      'Puzzle E mirrors your requested formation. Drag and arrange each piece to rebuild the full 8x8 cube.',
+      'Drag every piece with mouse or finger and arrange it into an 8x8 cube! SS a photo of the completed puzzle and ping production to stop your time!',
     templates: PUZZLE_FIVE_TEMPLATES,
   },
   {
     code: '601748',
     title: 'Block Puzzle F',
     subtitle:
-      'Puzzle F mirrors your latest piece formation. Drag and arrange each piece to rebuild the full 8x8 cube.',
+      'Drag every piece with mouse or finger and arrange it into an 8x8 cube! SS a photo of the completed puzzle and ping production to stop your time!',
     templates: PUZZLE_SIX_TEMPLATES,
+  },
+  {
+    code: '17388',
+    title: 'Block Puzzle G',
+    subtitle:
+      'Drag every piece with mouse or finger and arrange it into an 8x8 cube! SS a photo of the completed puzzle and ping production to stop your time!',
+    templates: PUZZLE_SEVEN_TEMPLATES,
   },
 ]
 
