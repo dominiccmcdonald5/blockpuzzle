@@ -1149,8 +1149,8 @@ const PUZZLES: PuzzleConfig[] = [
     templates: PUZZLE_TWO_TEMPLATES,
   },
   {
-    code: '102394548372313',
-    title: 'Block Puzzle C',
+    code: '0670',
+    title: 'Block Puzzle ',
     subtitle:
       'Drag every piece with mouse or finger and arrange it into an 8x8 cube! SS a photo of the completed puzzle and ping production to stop your time!',
     templates: PUZZLE_THREE_TEMPLATES,
