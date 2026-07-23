@@ -1017,6 +1017,122 @@ const PUZZLE_SEVEN_TEMPLATES: PieceTemplate[] = [
   },
 ]
 
+const PUZZLE_EIGHT_TEMPLATES: PieceTemplate[] = [
+  {
+    id: 'sun-yellow-top-left',
+    color: '#ffde00',
+    blocks: [
+      [0, 0],
+      [1, 0],
+      [2, 0],
+      [3, 0],
+      [0, 1],
+      [1, 1],
+      [2, 1],
+      [0, 2],
+      [1, 2],
+      [0, 3],
+    ],
+    anchorX: 0.04,
+    anchorY: 0.05,
+  },
+  {
+    id: 'lavender-top-right',
+    color: '#aba1e7',
+    blocks: [
+      [0,1],
+      [1,0],
+      [1,1],
+      [2,0],
+      [3,0],
+      [3,1],
+      [4,0],
+      [4,1]
+    ],
+    anchorX: 0.56,
+    anchorY: 0.05,
+  },
+  {
+    id: 'lime-center',
+    color: '#2be400',
+    blocks: [
+      [3,0],
+      [0,1],
+      [1,1],
+      [2,1],
+      [3,1],
+      [4,1],
+      [5,1],
+      [1,2],
+      [2,2],
+      [3,2],
+      [5,2],
+      [2,2],
+      [2,3],
+      [3,3],
+      [3,4]
+    ],
+    anchorX: 0.28,
+    anchorY: 0.32,
+  },
+  {
+    id: 'red-left-mid',
+    color: '#f01414',
+    blocks: [
+      [1,0],
+      [2,0],
+      [0,1],
+      [1,1],
+      [0,2],
+      [1,2],
+      [2,2],
+      [0,3],
+      [1,3]
+    ],
+    anchorX: 0.04,
+    anchorY: 0.42,
+  },
+  {
+    id: 'sky-bottom-left',
+    color: '#7bc9ee',
+    blocks: [
+      [2,0],
+      [3,0],
+      [3,1],
+      [4,1],
+      [2,2],
+      [3,2],
+      [0,3],
+      [1,3],
+      [2,3],
+      [3,3]
+    ],
+    anchorX: 0.14,
+    anchorY: 0.74,
+  },
+  {
+    id: 'orange-bottom-right',
+    color: '#ffad1f',
+    blocks: [
+      [2,0],
+      [2,1],
+      [2,2],
+      [3,1],
+      [3,2],
+      [0,3],
+      [1,3],
+      [2,3],
+      [3,3],
+      [0,4],
+      [1,4],
+      [2,4],
+      [3,4],
+    ],
+    anchorX: 0.56,
+    anchorY: 0.7,
+  },
+]
+
 const PUZZLES: PuzzleConfig[] = [
   {
     code: '1234',
@@ -1066,6 +1182,13 @@ const PUZZLES: PuzzleConfig[] = [
     subtitle:
       'Drag every piece with mouse or finger and arrange it into an 8x8 cube! SS a photo of the completed puzzle and ping production to stop your time!',
     templates: PUZZLE_SEVEN_TEMPLATES,
+  },
+  {
+    code: '1234567890',
+    title: 'Block Puzzle',
+    subtitle:
+      'Drag every piece with mouse or finger and arrange it into an 8x8 cube! SS a photo of the completed puzzle and ping production to stop your time!',
+    templates: PUZZLE_EIGHT_TEMPLATES,
   },
 ]
 
